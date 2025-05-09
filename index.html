@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha de Produto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .tabs {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+    .tab {
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-weight: 600;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+    .tab.active {
+      border-bottom: 3px solid #0078d4;
+      color: #0078d4;
+    }
+    .tab i {
+      color: inherit;
+      transition: color 0.3s;
+    }
+    .tab-content {
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-label {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #505050;
+    }
+    .form-value {
+      background: #f1f3f4;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #2d2d2d;
+    }
+    .icon {
+      font-size: 12px;
+      color: #605e5c;
+    }
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Segoe UI", sans-serif;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .styled-table thead {
+      background-color: #57c1b2;
+      color: white;
+      text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+    .styled-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('identificacao')"><i class="fas fa-id-badge icon"></i>Identificação</button>
+    <button class="tab" onclick="showTab('escopo')"><i class="fas fa-list icon"></i>Escopo</button>
+    <button class="tab" onclick="showTab('estrategia')"><i class="fas fa-bullseye icon"></i>Estratégia</button>
+    <button class="tab" onclick="showTab('qualificacao')"><i class="fas fa-check-circle icon"></i>Qualificação</button>
+  </div>
+
+  <div id="identificacao" class="tab-content active">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-box icon"></i>Nome do Produto</label>
+      <div class="form-value">Demandas de Direito Administrativo
+
+
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-align-left icon"></i>Descrição do Produto</label>
+      <p class="form-value">
+        Atuação completa em Direito Administrativo, abrangendo demandas não previstas em outros produtos específicos, como defesas em processos administrativos, questões envolvendo contratos públicos, pareceres jurídicos e relações com a Administração Pública.</p>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-barcode icon"></i>Código</label>
+      <div class="form-value">JUR204</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-sitemap icon"></i>Área</label>
+      <div class="form-value">Jurídica</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-cow icon"></i>Classificação BCG</label>
+      <div class="form-value">Vaca Leiteira</div>
+    </div>
+    </div>
+
+  </div>
+
+  <div id="escopo" class="tab-content">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-file-alt icon"></i>Escopo</label>
+      <div class="form-value">
+        <ol data-start="122" data-end="931">
+          <li data-start="122" data-end="253" class="">
+          <p data-start="125" data-end="253" class=""><strong data-start="125" data-end="148">Análise da Demanda:</strong> Avaliação inicial do problema apresentado pelo cliente, incluindo documentos e notificações recebidas.</p>
+          </li>
+          <li data-start="254" data-end="385" class="">
+          <p data-start="257" data-end="385" class=""><strong data-start="257" data-end="282">Elaboração da Defesa:</strong> Construção de defesa técnica para processos administrativos, impugnações, recursos e representações.</p>
+          </li>
+          <li data-start="386" data-end="536" class="">
+          <p data-start="389" data-end="536" class=""><strong data-start="389" data-end="419">Acompanhamento Processual:</strong> Monitoramento contínuo dos processos administrativos, garantindo que o cliente seja atualizado em todas as etapas.</p>
+          </li>
+          <li data-start="537" data-end="694" class="">
+          <p data-start="540" data-end="694" class=""><strong data-start="540" data-end="587">Atuação em Licitações e Contratos Públicos:</strong> Suporte em impugnações de editais, revisão de cláusulas contratuais e defesa em sanções administrativas.</p>
+          </li>
+          <li data-start="695" data-end="812" class="">
+          <p data-start="698" data-end="812" class=""><strong data-start="698" data-end="739">Negociação e Acordos Administrativos:</strong> Representação do cliente em negociações e acordos com órgãos públicos.</p>
+          </li>
+          <li data-start="813" data-end="931" class="">
+          <p data-start="816" data-end="931" class=""><strong data-start="816" data-end="836">Relatório Final:</strong> Comunicação clara ao cliente sobre o resultado do processo e orientações para ações futuras.</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-list-check icon"></i>Problemas que Resolve
+      </label>
+      <div class="form-value">
+        <ol data-start="970" data-end="1331">
+          <li data-start="970" data-end="1038" class="">
+          <p data-start="972" data-end="1038" class="">Notificações, autuações e sanções aplicadas por órgãos públicos.</p>
+          </li>
+          <li data-start="1039" data-end="1114" class="">
+          <p data-start="1041" data-end="1114" class="">Exclusão ou desclassificação em licitações e contratos administrativos.</p>
+          </li>
+          <li data-start="1115" data-end="1177" class="">
+          <p data-start="1117" data-end="1177" class="">Multas aplicadas por descumprimento de contratos públicos.</p>
+          </li>
+          <li data-start="1178" data-end="1249" class="">
+          <p data-start="1180" data-end="1249" class="">Risco de perda financeira em contratos com a administração pública.</p>
+          </li>
+          <li data-start="1250" data-end="1331" class="">
+          <p data-start="1252" data-end="1331" class="">Dificuldade em lidar com procedimentos e exigências da administração pública.</p>
+          </li>
+          </ol>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="	fas fa-trophy icon"></i>Benefícios
+      </label>
+      <div class="form-value">
+        <ol data-start="1359" data-end="1656">
+          <li data-start="1359" data-end="1433" class="">
+          <p data-start="1361" data-end="1433" class="">Garantia de ampla defesa e contraditório em processos administrativos.</p>
+          </li>
+          <li data-start="1434" data-end="1490" class="">
+          <p data-start="1436" data-end="1490" class="">Segurança jurídica nas relações com órgãos públicos.</p>
+          </li>
+          <li data-start="1491" data-end="1558" class="">
+          <p data-start="1493" data-end="1558" class="">Proteção do patrimônio da empresa contra penalidades indevidas.</p>
+          </li>
+          <li data-start="1559" data-end="1607" class="">
+          <p data-start="1561" data-end="1607" class="">Solução rápida de conflitos administrativos.</p>
+          </li>
+          <li data-start="1608" data-end="1656" class="">
+          <p data-start="1610" data-end="1656" class="">Orientação técnica e jurídica especializada.</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+  </div>
+
+  <div id="estrategia" class="tab-content">
+
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-fire icon"></i>Prioridade de Venda</label>
+        <div class="form-value">Média</div>
+      </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-lightbulb icon"></i>Quando Ofertar</label>
+      <div class="form-value">
+        <ol data-start="1688" data-end="2052">
+          <li data-start="1688" data-end="1761" class="">
+          <p data-start="1690" data-end="1761" class="">Quando a empresa recebe uma notificação ou autuação de órgão público.</p>
+          </li>
+          <li data-start="1762" data-end="1838" class="">
+          <p data-start="1764" data-end="1838" class="">Ao ser desclassificada em um processo licitatório de forma questionável.</p>
+          </li>
+          <li data-start="1839" data-end="1909" class="">
+          <p data-start="1841" data-end="1909" class="">Durante a execução de contratos públicos, em caso de divergências.</p>
+          </li>
+          <li data-start="1910" data-end="1960" class="">
+          <p data-start="1912" data-end="1960" class="">Ao planejar participar de licitações públicas.</p>
+          </li>
+          <li data-start="1961" data-end="2052" class="">
+          <p data-start="1963" data-end="2052" class="">Sempre que o cliente busca garantir segurança jurídica em negócios com o setor público.</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-gem icon"></i>Proposta de Valor</label>
+      <div class="form-value">Oferecemos defesa técnica e estratégica em demandas de Direito Administrativo, garantindo que sua empresa atue de forma segura e transparente em suas relações com o setor público, minimizando riscos e preservando seus direitos.
+
+    </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-shopping-basket icon"></i>Cross-selling</label>
+      <div class="form-value">
+        <table class="styled-table">
+          <thead>
+              <tr>
+                  <th>Produto Complementar</th>
+                  <th>Justificativa da Conexão</th>
+                  <th>Área</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="highlight">Consultoria Jurídica Contínua</td>
+                  <td>Suporte preventivo para evitar litígios administrativos.</td>
+                  <td>Jurídico</td>
+              </tr>
+              <tr>
+                  <td class="highlight">Gestão de Contencioso</td>
+                  <td>Acompanha e gerencia todos os processos administrativos da empresa.</td>
+                  <td>Jurídico</td>
+              </tr>
+              <tr>
+                  <td class="highlight">Planejamento Sucessório e Patrimonial</td>
+                  <td>Protege o patrimônio contra passivos administrativos.</td>
+                  <td>Jurídico</td>
+              </tr>
+              <tr>
+                  <td class="highlight">Compliance e Antissuborno</td>
+                  <td>Garante que a empresa esteja em conformidade com as normas de integridade pública.</td>
+                  <td>Jurídico</td>
+              </tr>
+              <tr>
+                  <td class="highlight">Análise de Contratos Administrativos</td>
+                  <td>Garante segurança jurídica em contratos com o setor público.</td>
+                  <td>Jurídico</td>
+              </tr>
+              <tr>
+                  <td class="highlight">Jurídico Recorrente</td>
+                  <td>Suporte contínuo para gestão de passivos administrativos.</td>
+                  <td>Jurídico</td>
+              </tr>
+              <tr>
+                  <td class="highlight">Planejamento Tributário</td>
+                  <td>Identifica oportunidades de economia fiscal em contratos públicos.</td>
+                  <td>Gestão Tributária</td>
+              </tr>
+              <tr>
+                  <td class="highlight">BPO Contábil e Fiscal</td>
+                  <td>Garante correta escrituração e conformidade em contratos públicos.</td>
+                  <td>Contabilidade</td>
+              </tr>
+              <tr>
+                  <td class="highlight">BI – Dashboards Jurídicos</td>
+                  <td>Permite acompanhar e mensurar o status dos processos administrativos.</td>
+                  <td>Inteligência de Dados</td>
+              </tr>
+              <tr>
+                  <td class="highlight">Gestão de Resultados Financeiros</td>
+                  <td>Analisa o impacto financeiro de passivos administrativos.</td>
+                  <td>Consultoria Empresarial</td>
+              </tr>
+              <tr>
+                  <td class="highlight">Valuation</td>
+                  <td>Avalia o impacto dos passivos administrativos no valor da empresa.</td>
+                  <td>Consultoria Empresarial</td>
+              </tr>
+              <tr>
+                  <td class="highlight">Estruturação de Dívidas</td>
+                  <td>Oferece alternativas para quitação de passivos administrativos.</td>
+                  <td>Soluções Financeiras</td>
+              </tr>
+          </tbody>
+      </table>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div id="qualificacao" class="tab-content">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-briefcase icon"></i>Regime Tributário Atendimento</label>
+      <div class="form-value">Lucro Real, Lucro Presumido</div>
+    </div>
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-sync-alt icon"></i>Tipo de Cobrança</label>
+        <div class="form-value">Pontual </div>
+      </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-globe icon"></i>Abrangência Geográfica</label>
+      <div class="form-value">Nacional</div>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label"><i class=" fas fa-file-invoice-dollar icon"></i>Faturamento Ideal</label>
+        <div class="form-value">Empresas com faturamento superior a R$ 5 milhões anuais.</div>
+      </div>
+
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-paperclip icon"></i>Documentos Solicitados</label>
+        <div class="form-value">
+          <ol data-start="4383" data-end="4710">
+            <li data-start="4383" data-end="4421" class="">
+            <p data-start="4386" data-end="4421" class="">Notificação ou autuação recebida.</p>
+            </li>
+            <li data-start="4422" data-end="4499" class="">
+            <p data-start="4425" data-end="4499" class="">Documentos que comprovem o cumprimento da norma ou contrato questionado.</p>
+            </li>
+            <li data-start="4500" data-end="4578" class="">
+            <p data-start="4503" data-end="4578" class="">Provas documentais (contratos, notas fiscais, comprovantes de pagamento).</p>
+            </li>
+            <li data-start="4579" data-end="4648" class="">
+            <p data-start="4582" data-end="4648" class="">Documentação relacionada ao processo licitatório (se aplicável).</p>
+            </li>
+            <li data-start="4649" data-end="4710" class="">
+            <p data-start="4652" data-end="4710" class="">Histórico da empresa em negociações com órgãos públicos.</p>
+            </li>
+            </ol>
+                </div>
+        
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><i class=" fas fa-industry icon"></i>Setores ICP</label>
+                <div class="form-value">
+                  <ol data-start="4740" data-end="4991">
+                    <li data-start="4740" data-end="4779" class="">
+                    <p data-start="4742" data-end="4779" class="">Empresas de Transporte e Logística.</p>
+                    </li>
+                    <li data-start="4780" data-end="4812" class="">
+                    <p data-start="4782" data-end="4812" class="">Construtoras e Empreiteiras.</p>
+                    </li>
+                    <li data-start="4813" data-end="4862" class="">
+                    <p data-start="4815" data-end="4862" class="">Prestadoras de Serviços para o Setor Público.</p>
+                    </li>
+                    <li data-start="4863" data-end="4906" class="">
+                    <p data-start="4865" data-end="4906" class="">Indústrias que fornecem para o Governo.</p>
+                    </li>
+                    <li data-start="4907" data-end="4961" class="">
+                    <p data-start="4909" data-end="4961" class="">Tecnologia da Informação (TI) e Serviços Digitais.</p>
+                    </li>
+                    <li data-start="4962" data-end="4991" class="">
+                    <p data-start="4964" data-end="4991" class="">Cooperativas de Trabalho.</p>
+                    </li>
+                    </ol>  
+                
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class="fas fa-exclamation-circle icon"></i>Objeções Mapeadas</label>
+                <div class="form-value">
+                  <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Objeção</th>
+                            <th>O que o cliente quer dizer</th>
+                            <th>Como contornar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="highlight">“Isso vai me dar problema com o órgão público?”</td>
+                            <td>Medo de retaliação ou fiscalização.</td>
+                            <td>Explicar que a defesa é um direito garantido por lei e que o órgão deve respeitar o contraditório.</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight">“É melhor pagar logo para não complicar.”</td>
+                            <td>Preferência por resolver rapidamente, sem análise.</td>
+                            <td>Reforçar que a defesa pode garantir economia e que multas indevidas não devem ser pagas.</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight">“Já tentamos antes e não deu certo.”</td>
+                            <td>Frustração com tentativas anteriores mal conduzidas.</td>
+                            <td>Destacar o diferencial da Funcional em elaborar defesas técnicas, com base em jurisprudência.</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight">“O processo vai demorar muito?”</td>
+                            <td>Dúvida sobre o prazo de retorno.</td>
+                            <td>Explicar que a defesa é apresentada em até 10 dias e que o processo segue prazos legais.</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight">“E se perdermos o contrato?”</td>
+                            <td>Medo de rescisão contratual ou penalidade.</td>
+                            <td>Reforçar que a defesa é o meio de garantir o cumprimento dos direitos do cliente.</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight">“É muito caro para o que oferece.”</td>
+                            <td>Dúvida sobre o custo-benefício.</td>
+                            <td>Demonstrar que o serviço evita prejuízos maiores e protege o patrimônio da empresa.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                  
+                           
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class=" fas fa-industry icon"></i>Personas</label>
+                <div class="form-value">
+                    <ul data-start="107" data-end="257">
+                        <li data-start="107" data-end="173" class="" style="">
+                        <p data-start="109" data-end="173" class=""><strong data-start="109" data-end="129">Influenciadores:</strong>Gerente Financeiro, Coordenador Financeiro</p>
+                        </li>
+                        <li data-start="174" data-end="257" class="" style="">
+                        <p data-start="176" data-end="257" class=""><strong data-start="176" data-end="190">Decisores:</strong> Proprietário, Diretor executivo 	</p>
+                        </li>
+                        </ul> </div>
+              </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-star-half-alt icon"></i>Diferenciais</label>
+      <div class="form-value">A Funcional atua com excelência técnica, estratégia jurídica e atendimento consultivo em demandas de direito administrativo, garantindo que o cliente tenha suporte completo em processos que envolvem o poder público, como defesa em autos de infração, contestações de multas, impugnações de licitações e ações judiciais relacionadas a contratos administrativos.
+
+        Nosso diferencial está na análise minuciosa de cada caso, interpretação da legislação específica, verificação de vícios formais e construção de defesas bem fundamentadas, sempre com linguagem acessível e orientação prática para o cliente.
+        
+        Com uma equipe jurídica experiente, entregamos pareceres técnicos, petições robustas, suporte em mediações e acompanhamento contínuo em todas as fases do processo, promovendo segurança jurídica e preservando os interesses do cliente.
+        
+        Mais do que apenas litigar, a Funcional oferece proteção jurídica, transparência e confiança, garantindo que o cliente enfrente demandas administrativas com clareza, estratégia e segurança.
+        
+        
+        
+        </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`.tab[onclick="showTab('${id}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
